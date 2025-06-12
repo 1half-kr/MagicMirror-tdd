@@ -1,7 +1,7 @@
 Module.register("register", {
   defaults: {
-    title: "자서전 인터뷰 장비 등록하기",
-    description: "인터뷰 장비의 serial ID를 입력해 주세요."
+    title: "이 기기의 Serial ID가 맞는지 확인해주세요.",
+    description: "맞다면 \"등록하기\"를 눌러 인터뷰를 시작해보세요 !"
   },
 
   /** post api 와 page 이동 함수 **/
@@ -33,7 +33,7 @@ Module.register("register", {
     buttonContainer.addEventListener("click", () => this.showBottomSheet())
 
     const information_text = document.createElement("p");
-    information_text.textContent = "Serial ID를 어디서 확인하나요 ?";
+    information_text.textContent = "Serial ID는 어디서 확인하나요 ?";
 
     // 등록하기 버튼 (아이콘 이미지)
     const information_icon = document.createElement("img");
@@ -52,15 +52,7 @@ Module.register("register", {
     const submit_btn = document.createElement("button");
     submit_btn.textContent = "등록하기";
     submit_btn.addEventListener("click", () => {
-      const serialId = serial_input.value;  // input 필드 값 가져오기
-      if (serialId) {
-        const data = { serialId };  // 보낼 데이터 구성
-        this.postData(data);        // POST 호출
-        this.sendNotification("REGISTER_SUBMIT", data); // 알림 전송 (원하면)
-        this.showBottomSheet();     // 바텀시트 보여주기 (원하면)
-      } else {
-        alert("Serial ID를 입력해주세요!");
-      }
+      this.sendNotification("PAGE_CHANGED", 1);
     });
     wrapper.appendChild(submit_btn);
 
