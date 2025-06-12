@@ -37,7 +37,6 @@ getDom() {
 
   const skipBtn = document.createElement("button");
   skipBtn.className = "second-btn";
-  skipBtn.textContent = "인터뷰 없이 홈 이동하기";
   skipBtn.onclick = () => {
     this.sendNotification("PAGE_CHANGED", 5); // 원하는 동작 설정
   };

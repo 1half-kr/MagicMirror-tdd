@@ -6,9 +6,7 @@ Module.register("customNav", {
     wrapper.className = "custom-nav";
 
     const items = [
-      { name: "인터뷰", icon: "interview_icon.svg", index: 3 },
-      { name: "책갈피", icon: "chapter_icon.svg", index: 4 },
-      { name: "출판 요청", icon: "publishing_icon.svg", index: 5 }
+      { name: "인터뷰", icon: "interview_icon.svg", index: 3 }
     ];
 
     items.forEach(item => {
