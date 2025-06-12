@@ -46,6 +46,14 @@ let config = {
             }
         },
 		{
+            module: 'MMM-TTS',
+			position: 'top_right',
+			config: {
+				speed: 1.2,
+			}
+
+        },
+		{
     		module: "MMM-pages",
     		config: {
       			modules: [

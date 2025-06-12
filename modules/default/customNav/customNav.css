@@ -18,6 +18,8 @@
     max-width: 100px !important;
     aspect-ratio: 1/1 !important; /* 정사각형 비율 유지 */
     background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
     border: none !important;
     cursor: pointer !important;
     transition: all 0.3s ease !important;
@@ -30,6 +32,9 @@
 }
 
 .custom-nav .nav-item img {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
   width: 80%;
   height: auto;
   max-height: 100%;

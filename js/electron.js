@@ -71,7 +71,7 @@ function createWindow () {
 		electronOptionsDefaults.frame = false;
 		electronOptionsDefaults.transparent = true;
 		electronOptionsDefaults.hasShadow = false;
-		electronOptionsDefaults.fullscreen = true;
+		electronOptionsDefaults.fullscreen = false;
 	}
 
 	const electronOptions = Object.assign({}, electronOptionsDefaults, config.electronOptions);

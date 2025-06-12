@@ -74,6 +74,11 @@ Temporary Items
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 
+/modules/default/shared/**
+/modules/MMM-TTS/
+/modules/MMM-pages/
+/modules/MMM-auto-refresh/
+
 ## diff patch
 *.orig
 *.rej
